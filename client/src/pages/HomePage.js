@@ -4,7 +4,7 @@ function Home() {
 
   return (
     <>
-      home
+      This is Home page..
     </>
   );
 }
