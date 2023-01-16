@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import Dropdown from 'react-bootstrap/Dropdown';
 import SplitButton from 'react-bootstrap/SplitButton';
 
-import web3 from '../web3'
-import votingSystem from "../contracts_confige/votingSystem"
+import web3 from '../../../../web3'
+import votingSystem from "../../../../contractDetail/contracts_confige/votingSystem"
 
 
 
@@ -69,10 +69,10 @@ export default function VotingSystem() {
 
     const getElectionWinner = async () => {
         // await votingSystem.methods.winnerIs().call();
-        console.log("election winner is-->",await votingSystem.methods.winnersName().call())
-        console.log("election year-->",await votingSystem.methods.ElectionYear().call())
+        console.log("election winner is-->", await votingSystem.methods.winnersName().call())
+        console.log("election year-->", await votingSystem.methods.ElectionYear().call())
     }
-    
+
 
     return (
         <>

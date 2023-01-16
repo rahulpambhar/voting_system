@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import Dropdown from 'react-bootstrap/Dropdown';
 import SplitButton from 'react-bootstrap/SplitButton';
 
-import web3 from '../web3'
-import electionStateFactory from "../contracts_confige/electionStateFactory"
+import web3 from '../../../../web3'
+import electionStateFactory from "../../../../contractDetail/contracts_confige/electionStateFactory"
 
-import StateContract from "../contracts_confige/state"
+import StateContract from "../../../../contractDetail/contracts_confige/state"
 
 
 export default function State() {

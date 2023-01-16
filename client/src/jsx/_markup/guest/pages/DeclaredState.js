@@ -1,17 +1,29 @@
 import React, { useEffect, useState } from "react";
-import web3 from '../web3'
-import electionStateFactory from "../contracts_confige/electionStateFactory"
+import web3 from '../../../../web3'
+import electionStateFactory from "../../../contractDetail/contracts_confige/electionStateFactory"
+
+import useServiceContextHook from '../../../_hooks/service.context.hook'
 
 
 
 export default function App() {
     const [Ec, setEC] = useState('')
+    const [account, setAccounts] = useState('')
     const [allStates, setAllStates] = useState([])
     const [newState, setNewState] = useState('')
+    // const { hello } = useServiceContextHook()
 
     const setPublic = async () => {
+
+        const { ethereum } = window;
+        if (ethereum) {
+            setAccounts(await ethereum.request({
+                method: "eth_requestAccounts"
+            }))
+
+        }
         setEC(await electionStateFactory.methods.electionCommitioner().call())
-        setAllStates(await electionStateFactory.methods.getStates().call())    
+        setAllStates(await electionStateFactory.methods.getStates().call())
     }
 
     useEffect(() => {
@@ -20,7 +32,7 @@ export default function App() {
 
     const newStateSubmit = async (e) => {
         e.preventDefault();
-        const account = await web3.eth.getAccounts()
+        // const account = await web3.eth.getAccounts()
         await electionStateFactory.methods.creatingNewState(newState).send({ from: account[0] })
         setNewState('')
         setPublic()
@@ -28,6 +40,7 @@ export default function App() {
 
     return (
         <>
+
 
             <h5>Elaction commitinior:</h5> {Ec}
             <hr />
@@ -41,8 +54,8 @@ export default function App() {
 
             <hr />
 
-            <p style={{ textAlign: "center", marginTop: "20px" }}>States</p>
-            {allStates.map((states,i) => {
+            <p style={{ textAlign: "center", marginTop: "20px" }}>Declared States </p>
+            {allStates.map((states, i) => {
                 return (
                     <div
                         className="container-fluid"
@@ -77,8 +90,8 @@ export default function App() {
                                         }}
                                     >
                                         {states.deployedStateAddress}
-                                    </td>                                   
-                                   
+                                    </td>
+
                                 </tr>
                             </tbody>
                         </table>
