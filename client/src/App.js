@@ -4,8 +4,8 @@ import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 
 import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
+import Navbar from './jsx/components/Navbar'
+import Footer from './jsx/components/Footer'
 import setAuthHeader from './Authentication/setAuthentication'
 
 

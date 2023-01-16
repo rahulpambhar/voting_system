@@ -4,13 +4,9 @@ import { Link } from 'react-router-dom';
 
 import {
     MDBNavbar,
-    MDBContainer,
-    MDBIcon,
+    MDBContainer,    
     MDBNavbarNav,
-    MDBNavbarItem,
-    MDBNavbarLink,
-    MDBNavbarToggler,
-    MDBBtn,
+    MDBNavbarItem,    
     MDBNavbarBrand,
     MDBCollapse
 } from 'mdb-react-ui-kit';
@@ -59,10 +55,15 @@ export default function Navbar() {
 
                     <MDBCollapse navbar show={showNavColor} >
 
-                        <MDBNavbarNav fullWidth={false} className='me-auto mb-2 mb-lg-0 '  >
+                        <MDBNavbarNav fullWidth={false} className='me-auto mb-2 mb-lg-0 '  >                          
+
 
                             <MDBNavbarItem className='active'>
                                 <Link className='btn' aria-current='page' id="RouterNavLink" to="/"  >Home</Link>
+                            </MDBNavbarItem>
+
+                            <MDBNavbarItem className='active'>
+                                <Link className='btn' aria-current='page' id="RouterNavLink" to="/officeWork"  >Office Work</Link>
                             </MDBNavbarItem>
 
                             <MDBNavbarItem>
@@ -76,6 +77,9 @@ export default function Navbar() {
                             <MDBNavbarItem>
                                 <Link className='btn' id="RouterNavLink" to="/"  >Add Voters</Link>
                             </MDBNavbarItem>
+
+
+
                         </MDBNavbarNav>
 
 
