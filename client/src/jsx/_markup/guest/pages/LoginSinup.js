@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import { Formik, Form, Field, label, ErrorMessage } from "formik";
 import * as Yup from 'yup';
 import axios from 'axios'
-import { useAlert } from 'react-alert'
-import { positions } from 'react-alert'
-
+import { useAlert,positions } from 'react-alert'
 
 const SignupSchema = Yup.object().shape({
   // UserName: Yup.string()

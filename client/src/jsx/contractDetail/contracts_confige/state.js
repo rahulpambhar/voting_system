@@ -1,4 +1,4 @@
-import web3 from "../web3";
+import web3 from "../../web3";
 
 const State = require ('../contracts_abi/state.json')
 
