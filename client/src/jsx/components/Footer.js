@@ -1,12 +1,10 @@
 import React from 'react';
 import {
   MDBFooter,
-  MDBContainer,
-  MDBCol,
-  MDBRow,
+  MDBContainer, 
   MDBBtn
 } from 'mdb-react-ui-kit';
-import '../App.css'
+import '../../App.css'
 
 export default function App() {
   return (

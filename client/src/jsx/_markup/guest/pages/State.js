@@ -3,14 +3,12 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import SplitButton from 'react-bootstrap/SplitButton';
 
 import web3 from '../../../../web3'
-import electionStateFactory from "../../../../contractDetail/contracts_confige/electionStateFactory"
+import electionStateFactory from "../../../contractDetail/contracts_confige/electionStateFactory"
 
-import StateContract from "../../../../contractDetail/contracts_confige/state"
+import StateContract from "../../../contractDetail/contracts_confige/state"
 
 
 export default function State() {
-
-    const [Ec, setEC] = useState('')
     const [allStates, setAllStates] = useState([])
     const [pinCode, setPinCode] = useState('')
     const [stateAddress, setStateAddress] = useState('')
@@ -29,11 +27,8 @@ export default function State() {
 
 
     const setPublic = async () => {
-        setEC(await electionStateFactory.methods.electionCommitioner().call())
+       
         setAllStates(await electionStateFactory.methods.getStates().call())
-
-
-
     }
 
     useEffect(() => {
@@ -89,9 +84,8 @@ export default function State() {
 
     return (
         <>
-            <h5 className="">Elaction commitinior:</h5> {Ec}
-            <hr />
-            <br />
+
+           
 
             {['Info'].map(
                 (variant) => (
