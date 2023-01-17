@@ -5,7 +5,7 @@ import DeclareState from './_markup/guest/pages/DeclaredState'
 import OffieWork from "./_markup/admin/pages/officeWork";
 
 import State from './_markup/guest/pages/State'
-// import VotingSystem from './jsx/_markup/guest/pages/VotingSystem'
+import VotingSystem from './_markup/guest/pages/VotingSystem'
 import HomePage from './_markup/guest/pages/HomePage'
 import LoginSignup from './_markup/guest/pages/LoginSinup'
 
@@ -34,7 +34,7 @@ function Markup() {
                     <Route path="/login" element={<LoginSignup />} />
                     <Route path="/DeclareState" element={<DeclareState />} />
                     <Route path="/stateinfo" element={<State />} />
-                    {/* <Route path="/votingSystem" element={<VotingSystem />} />  */}
+                    <Route path="/votingSystem" element={<VotingSystem />} /> 
 
                 </Routes>
             </div>

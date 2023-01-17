@@ -3,7 +3,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import SplitButton from 'react-bootstrap/SplitButton';
 
 import web3 from '../../../../web3'
-import votingSystem from "../../../../contractDetail/contracts_confige/votingSystem"
+import votingSystem from "../../../contractDetail/contracts_confige/votingSystem"
 
 
 
