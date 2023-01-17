@@ -75,7 +75,7 @@ export default function Navbar() {
                             </MDBNavbarItem>
 
                             <MDBNavbarItem>
-                                <Link className='btn' id="RouterNavLink" to="/"  >Add Voters</Link>
+                                <Link className='btn' id="RouterNavLink" to="/votingSystem"  >Vote</Link>
                             </MDBNavbarItem>
 
 
